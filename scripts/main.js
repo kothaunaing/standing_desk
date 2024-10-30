@@ -1,27 +1,21 @@
-// Header start
+// Hero section
 
-const closeButton = _(".close-button");
-const navBar = _(".nav-bar");
-
-function toggleMenu() {
-  navBar.classList.toggle("closed");
-
-  if (navBar.classList.contains("closed")) {
-    closeButton.innerHTML = '<i class="fa fa-bars menu-icon"></i>';
-  } else {
-    closeButton.innerHTML = '<i class="fa fa-times close-button-icon"></i>';
-  }
-}
-
-toggleMenu();
-
-closeButton.addEventListener("click", toggleMenu);
-
-function _(selector) {
-  return document.querySelector(selector);
-}
-
-// Header end
+const typed = new Typed(".typing-text", {
+  strings: [
+    "Transform Your Workspace!",
+    "Boost Your Productivity!",
+    "Enhance Your Posture!",
+    "Work in Comfort and Style!",
+    "Stand Up for Better Health!",
+    "A Desk for Every Task!",
+    "Elevate Your Workday!",
+    "Discover Ergonomic Excellence!",
+  ],
+  typeSpeed: 150,
+  backSpeed: 150,
+  loop: true,
+  smartBackspace: true,
+});
 
 // Slideshow start
 const slideShowsContainer = _(".slideshow-container");
@@ -111,8 +105,6 @@ prevButton.addEventListener("click", () => {
 
 function automateSlides() {
   intervalId = setInterval(() => {
-    nextButton.classList.add("hover-button");
-    nextButton.classList.remove("hover-button");
     nextButton.click();
   }, 3000);
 }
@@ -129,3 +121,27 @@ function showSlides(n) {
 
   slides[slideIndex - 1].style.display = "block";
 }
+
+// Handling swiping functionality for carousel
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+slideShowsContainer.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].clientX;
+});
+
+slideShowsContainer.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  handleSwipeGesture();
+});
+
+function handleSwipeGesture() {
+  if (touchEndX < touchStartX - 50) {
+    nextButton.click();
+  } else if (touchEndX > touchStartX + 50) {
+    prevButton.click();
+  }
+}
+
+// Slideshow end

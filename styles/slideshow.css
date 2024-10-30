@@ -28,7 +28,7 @@
   right: 0;
   left: 50%;
   animation: right-to-left 1s infinite;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
   background: var(--gradient-color);
   box-shadow: 0 0 20px rgb(255, 0, 0);
   z-index: -1;
@@ -56,14 +56,6 @@
   max-width: 800px;
   border-radius: 5px;
 }
-
-/* .slideshow-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #00000010;
-  z-index: 1;
-} */
 
 .slide {
   text-align: center;
@@ -117,7 +109,7 @@
   position: absolute;
   border: none;
   background-color: #3b3b3b49;
-  padding: 5px;
+  padding: 8px;
   border-radius: 2px;
   cursor: pointer;
   transition: box-shadow 0.3s ease, opacity 0.4s ease;
@@ -131,7 +123,7 @@
 
 .previous-button:hover,
 .next-button:hover {
-  box-shadow: 0 0 8px yellow;
+  box-shadow: 0 0 8px var(--accent-color);
 }
 
 .previous-button {

@@ -11,8 +11,8 @@
 
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/hero.css" />
-    <link rel="stylesheet" href="styles/slideshow.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+
     <link rel="stylesheet" href="styles/footer.css" />
     <!-- Font awesome icons -->
     <link
@@ -33,9 +33,11 @@
       <nav class="nav-bar">
         <ul>
           <li class="nav-link">
-            <a class="active" href="index.html">Home</a>
+            <a href="index.html">Home</a>
           </li>
-          <li class="nav-link"><a href="contact.html">Contact </a></li>
+          <li class="nav-link">
+            <a class="active" href="contact.html">Contact </a>
+          </li>
           <li class="nav-link"><a href="about.html">About </a></li>
           <li class="dropdown nav-link">
             <a href="#"><i class="fa fa-chevron-down"></i> Products </a>
@@ -51,21 +53,66 @@
 
     <!-- Main -->
     <main>
-      <!-- Hero Area -->
-      <section class="hero">
-        <div class="hero-content">
-          <span class="typing-text"></span>
-          <p>Discover our exclusive collection and enjoy special offers.</p>
-          <a class="shop-now-button" href="#">Shop Now</a>
+      <form class="contact-form" method="get" action="index.html">
+        <div class="title">
+          <h1>Contact us</h1>
         </div>
-      </section>
-      <!-- Special offer carousel -->
-      <section class="special-offer-section">
-        <h1>Special Offers</h1>
-        <div class="slideshow-container">
-          <!-- Used JavaScript to render slides -->
+
+        <div>
+          <label for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
         </div>
-      </section>
+
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Address"
+            required
+          />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Your Phone Number"
+          />
+        </div>
+
+        <div>
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Subject of Your Message "
+            required
+          />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            placeholder="Your Message"
+            name="message"
+            id="message"
+            required
+          ></textarea>
+        </div>
+
+        <div class="submit-container">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
     </main>
 
     <!-- Footer -->
@@ -100,8 +147,8 @@
     </footer>
     <!-- Script -->
     <!-- TypedJS -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
     <script src="scripts/header.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/contact.js"></script>
   </body>
 </html>

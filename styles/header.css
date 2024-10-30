@@ -1,12 +1,6 @@
 /* Main header */
 
 /* CSS variables */
-:root {
-  --primary-color: #f3f3a4;
-  --secondary-color: #fafa07;
-  --gradient-color: linear-gradient(120deg, lightpink, cyan);
-  --border-color: rgb(211, 211, 211);
-}
 
 .main-header {
   display: flex;
@@ -86,6 +80,23 @@ nav ul {
   color: black;
 }
 
+.nav-link a.active {
+  color: var(--text-color);
+
+  position: relative;
+}
+
+.nav-link a.active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+
+  background-color: var(--text-color);
+  position: absolute;
+  top: 120%;
+  left: 0;
+}
+
 .nav-link > a {
   font-size: 1.1rem;
   transition: color 0.3s ease-in-out;
@@ -139,6 +150,10 @@ nav ul {
 
 .dropdown ul li:hover {
   background-color: white;
+}
+
+.fa-chevron-down {
+  font-size: 0.7rem;
 }
 
 /* dropdown end */

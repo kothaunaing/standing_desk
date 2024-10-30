@@ -12,9 +12,24 @@ html {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(120deg, var(--primary-color), lightgreen);
+  background: var(--gradient-color);
 }
 
 .main-footer {
   margin-top: auto;
+}
+
+:root {
+  --primary-color: #6b4f4f; /* Deep Brown */
+  --secondary-color: #f7c6a7; /* Soft Peach */
+  --accent-color: #b4d9d6; /* Cool Teal */
+  --highlight-color: #ffd700; /* Bright Gold */
+  --highlight-color-opacity: #ffd90098;
+  --background-color: #faf3e0; /* Creamy White */
+  --text-color: #3c3c3c; /* Dark Charcoal */
+  --gradient-color: linear-gradient(
+    135deg,
+    #faf3e0,
+    #f7c6a7
+  ); /* Cream to Peach Gradient */
 }
