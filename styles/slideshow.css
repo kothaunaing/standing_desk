@@ -1,0 +1,181 @@
+:root {
+  --caption-background: #2e2e2e79;
+}
+
+.special-offer-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.special-offer-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px #4e19e2;
+  position: relative;
+  z-index: 0;
+}
+
+.special-offer-section h1::after {
+  content: "";
+  height: 4px;
+  width: 50px;
+  background-color: black;
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  left: 50%;
+  animation: right-to-left 1s infinite;
+  animation-direction: alternate-reverse;
+  background: var(--gradient-color);
+  box-shadow: 0 0 20px rgb(255, 0, 0);
+  z-index: -1;
+}
+
+@keyframes right-to-left {
+  from {
+    transform: translateX(-120px);
+  }
+
+  to {
+    transform: translateX(60px);
+  }
+}
+
+.slideshow-container {
+  height: 350px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 5px;
+}
+
+/* .slideshow-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #00000010;
+  z-index: 1;
+} */
+
+.slide {
+  text-align: center;
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.number {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px;
+  background-color: var(--caption-background);
+  color: white;
+  border-radius: 5px;
+
+  transition: opacity 0.4s ease;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 5px;
+  background-color: var(--caption-background);
+  color: white;
+
+  transition: opacity 0.4s ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+.slideshow-container:hover .previous-button,
+.slideshow-container:hover .next-button {
+  opacity: 1;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.previous-button,
+.next-button {
+  position: absolute;
+  border: none;
+  background-color: #3b3b3b49;
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.hover-button {
+  box-shadow: 0 0 8px yellow;
+}
+
+.previous-button:hover,
+.next-button:hover {
+  box-shadow: 0 0 8px yellow;
+}
+
+.previous-button {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next-button {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 0.4s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .next-button,
+  .previous-button {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .slideshow-container {
+    height: 400px;
+  }
+}
+
+@media (min-width: 801px) {
+  .slideshow-container {
+    height: 450px;
+  }
+}

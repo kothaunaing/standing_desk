@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Standing Desk Hub</title>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header,
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem 2rem;
+        text-align: center;
+      }
+      header nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      header nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      footer ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+      }
+      footer ul li {
+        margin: 0 10px;
+      }
+      footer ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      .hero {
+        background-image: url("images/computer-desk.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .cta-button {
+        background-color: #ff6f61;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .cta-button:hover {
+        background-color: #ff473e;
+      }
+      .features,
+      .product-showcase,
+      .testimonials {
+        padding: 2rem;
+        text-align: center;
+      }
+      .features h2,
+      .product-showcase h2,
+      .testimonials h2 {
+        font-size: 36px;
+        margin-bottom: 1rem;
+      }
+      .feature-item,
+      .product-item {
+        display: inline-block;
+        width: 30%;
+        margin: 1rem;
+        vertical-align: top;
+      }
+      .feature-item img,
+      .product-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .feature-item h3,
+      .product-item h3 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+      .testimonials blockquote {
+        font-size: 18px;
+        font-style: italic;
+      }
+      .testimonials footer {
+        text-align: right;
+        font-weight: bold;
+      }
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .feature-item,
+        .product-item {
+          width: 100%;
+        }
+        .hero h1 {
+          font-size: 36px;
+        }
+        .hero p {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Rising Desks</a></li>
+          <li><a href="#">Health Benefits</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Transform Your Workspace</h1>
+      <p>
+        Discover the benefits of standing desks for health and productivity.
+      </p>
+      <a href="#" class="cta-button">Explore Desks</a>
+    </section>
+
+    <section class="features">
+      <h2>Why Choose a Standing Desk?</h2>
+      <div class="feature-item">
+        <img src="images/computer-desk.jpg" alt="Health Benefits" />
+        <h3>Boost Your Health</h3>
+        <p>Standing desks help reduce back pain and improve posture.</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/dual-monitor.jpg" alt="Productivity Benefits" />
+        <h3>Increase Productivity</h3>
+        <p>
+          Standing while working keeps you energized and focused throughout the
+          day.
+        </p>
+      </div>
+      <div class="feature-item">
+        <img src="/images/standing-desk-office.webp" alt="Ergonomics" />
+        <h3>Ergonomic Design</h3>
+        <p>
+          Adjustable standing desks allow you to find the perfect height for
+          your workspace.
+        </p>
+      </div>
+    </section>
+
+    <section class="product-showcase">
+      <h2>Featured Products</h2>
+      <div class="product-item">
+        <img src="images/computer-desk.jpg" alt="Laptop Standing Desk" />
+        <h3>Laptop Standing Desk</h3>
+        <p>Ideal for compact workspaces and home offices.</p>
+        <a href="#" class="cta-button">View More</a>
+      </div>
+      <div class="product-item">
+        <img src="images/dual-monitor.jpg" alt="Full-Size Standing Desk" />
+        <h3>Full-Size Standing Desk</h3>
+        <p>Perfect for larger work environments.</p>
+        <a href="#" class="cta-button">View More</a>
+      </div>
+      <div class="product-item">
+        <img src="images/standing-desk-office.webp" alt="Adjustable Desk" />
+        <h3>Adjustable Standing Desk</h3>
+        <p>Designed for maximum flexibility and comfort.</p>
+        <a href="#" class="cta-button">View More</a>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <blockquote>
+        <p>
+          "Switching to a standing desk has completely transformed my workday. I
+          feel more energized and productive!"
+        </p>
+        <footer>- John D.</footer>
+      </blockquote>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Standing Desk Hub. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
