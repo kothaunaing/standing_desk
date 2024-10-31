@@ -1,0 +1,71 @@
+main {
+  margin: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.baskets-container {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.basket-container {
+  box-shadow: 0 0 5px gray;
+
+  border-radius: 5px;
+
+  display: flex;
+  gap: 5px;
+  overflow: hidden;
+}
+
+.basket-container > div {
+  flex: 1;
+  padding: 5px;
+}
+
+.basket-image {
+  width: 150px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  color: rgb(85, 85, 85);
+}
+
+.product-description {
+  font-size: 0.9rem;
+}
+
+.product-price {
+  font-size: 1.2rem;
+}
+
+.delete-button {
+  border: none;
+  background-color: rgb(211, 211, 211);
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  opacity: 0.7;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: rgb(73, 73, 73);
+}
