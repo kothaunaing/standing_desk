@@ -1,23 +1,36 @@
+// Popup
+const popup = _("#welcome-popup");
+const closePopupButton = _("#close-welcome-popup");
+
+popup.classList.add("opened-popup");
+closePopupButton.addEventListener("click", () => {
+  popup.classList.remove("opened-popup");
+});
 // Hero section
 
-const typed = new Typed(".typing-text", {
-  strings: [
-    "Transform Your Workspace!",
-    "Boost Your Productivity!",
-    "Enhance Your Posture!",
-    "Work in Comfort and Style!",
-    "Stand Up for Better Health!",
-    "A Desk for Every Task!",
-    "Elevate Your Workday!",
-    "Discover Ergonomic Excellence!",
-  ],
-  typeSpeed: 150,
-  backSpeed: 150,
-  loop: true,
-  smartBackspace: true,
-});
+try {
+  new Typed(".typing-text", {
+    strings: [
+      "Transform Your Workspace!",
+      "Boost Your Productivity!",
+      "Enhance Your Posture!",
+      "Work in Comfort and Style!",
+      "Stand Up for Better Health!",
+      "A Desk for Every Task!",
+      "Elevate Your Workday!",
+      "Discover Ergonomic Excellence!",
+    ],
+    typeSpeed: 150,
+    backSpeed: 150,
+    loop: true,
+    smartBackspace: true,
+  });
+} catch (error) {
+  console.log(error.message);
+}
 
 // Slideshow start
+
 const slideShowsContainer = _(".slideshow-container");
 const slideShows = [
   {
@@ -55,6 +68,7 @@ function renderSlideshows() {
             <div class="caption">
               <p>${slide.caption}</p>
             </div>
+  
           </div>
     `;
   });

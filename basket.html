@@ -11,7 +11,6 @@
 
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/contact.css" />
 
     <link rel="stylesheet" href="styles/footer.css" />
     <!-- Font awesome icons -->
@@ -20,9 +19,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <title>SDC | Contact Us</title>
+    <title>SDC | Desks</title>
   </head>
   <body>
+    <div class="popup" id="welcome-popup">
+      <div>
+        <h1>Welcome to The Standing Desk Company</h1>
+        <button id="close-welcome-popup"><i class="fa fa-close"></i></button>
+      </div>
+    </div>
     <!-- Header -->
     <header class="main-header">
       <button class="close-button"></button>
@@ -37,7 +42,7 @@
           </li>
 
           <li class="dropdown nav-link">
-            <a href="#"
+            <a class="active" href="#"
               ><i
                 class="fa fa-chevron-down xs"
                 style="font-size: 13px; margin-right: 3px"
@@ -46,101 +51,19 @@
             >
             <ul>
               <li><a href="desks.html">Rising Desks</a></li>
-              <li><a href="basket.html">Basket</a></li>
+              <li><a class="active" href="basket.html">Basket</a></li>
             </ul>
           </li>
           <li class="nav-link">
             <a href="health-benefits.html">Health Benefits</a>
           </li>
-          <li class="nav-link">
-            <a class="active" href="contact.html">Contact Us</a>
-          </li>
+          <li class="nav-link"><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Popup -->
-    <div class="popup">
-      <div>
-        <p>Form has been submitted!</p>
-        <button id="ok-button">OK</button>
-      </div>
-    </div>
-
     <!-- Main -->
-    <main>
-      <form class="contact-form" method="get" action="contact.html">
-        <div class="title">
-          <h1>Contact us</h1>
-        </div>
-
-        <div>
-          <label for="name">Name</label>
-          <input
-            class="text-input"
-            id="name"
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
-        </div>
-
-        <div>
-          <label for="email">Email</label>
-          <input
-            class="text-input"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your Email Address"
-            required
-          />
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input
-            class="text-input"
-            type="tel"
-            name="phone"
-            id="phone"
-            placeholder="Your Phone Number"
-          />
-        </div>
-
-        <div>
-          <label for="subject">Subject</label>
-          <input
-            class="text-input"
-            type="text"
-            name="subject"
-            id="subject"
-            placeholder="Subject of Your Message "
-            required
-          />
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea
-            placeholder="Your Message"
-            name="message"
-            id="message"
-            required
-          ></textarea>
-        </div>
-
-        <div>
-          <div class="receive-letter">
-            <label for="receive-letter-checkbox">Receive newsletter</label>
-            <input id="receive-letter-checkbox" type="checkbox" />
-          </div>
-        </div>
-
-        <div class="submit-container">
-          <button id="submit-button" type="submit">Submit</button>
-        </div>
-      </form>
-    </main>
+    <main></main>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -176,6 +99,5 @@
     <!-- TypedJS -->
 
     <script src="scripts/header.js"></script>
-    <script src="scripts/contact.js"></script>
   </body>
 </html>

@@ -3,217 +3,167 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Standing Desk Hub</title>
+    <title>Health Benefits of a Standing Desk</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your CSS file -->
     <style>
-      /* Global Styles */
       body {
         font-family: Arial, sans-serif;
+        line-height: 1.6;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        background-color: #f4f4f4;
       }
-      header,
-      footer {
-        background-color: #333;
-        color: white;
-        padding: 1rem 2rem;
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 20px;
         text-align: center;
       }
-      header nav ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      header nav ul li {
-        display: inline;
-        margin-right: 20px;
-      }
-      header nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-      }
-      footer ul {
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-        padding: 0;
-      }
-      footer ul li {
-        margin: 0 10px;
-      }
-      footer ul li a {
-        color: white;
-        text-decoration: none;
+      h1,
+      h2 {
+        color: #333;
       }
       .hero {
-        background-image: url("images/computer-desk.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 400px;
-        color: white;
-        text-align: center;
+        background: url("assets/images/hero-image.webp") no-repeat center
+          center/cover;
+        height: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-      }
-      .hero h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
-      }
-      .hero p {
-        font-size: 20px;
-        margin-bottom: 20px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
       .cta-button {
-        background-color: #ff6f61;
+        background: #007bff;
         color: white;
         padding: 10px 20px;
         text-decoration: none;
         border-radius: 5px;
-      }
-      .cta-button:hover {
-        background-color: #ff473e;
-      }
-      .features,
-      .product-showcase,
-      .testimonials {
-        padding: 2rem;
-        text-align: center;
-      }
-      .features h2,
-      .product-showcase h2,
-      .testimonials h2 {
-        font-size: 36px;
-        margin-bottom: 1rem;
-      }
-      .feature-item,
-      .product-item {
+        margin-top: 20px;
         display: inline-block;
-        width: 30%;
-        margin: 1rem;
-        vertical-align: top;
       }
-      .feature-item img,
-      .product-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
+      .section {
+        background: white;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
-      .feature-item h3,
-      .product-item h3 {
-        font-size: 24px;
+      .testimonial {
+        background: #f9f9f9;
+        padding: 10px;
+        border-left: 5px solid #007bff;
         margin: 10px 0;
       }
-      .testimonials blockquote {
-        font-size: 18px;
-        font-style: italic;
-      }
-      .testimonials footer {
-        text-align: right;
-        font-weight: bold;
-      }
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .feature-item,
-        .product-item {
-          width: 100%;
-        }
-        .hero h1 {
-          font-size: 36px;
-        }
-        .hero p {
-          font-size: 16px;
-        }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #333;
+        color: white;
       }
     </style>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Rising Desks</a></li>
-          <li><a href="#">Health Benefits</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav>
+      <h1>Transform Your Health with a Standing Desk</h1>
+      <p>Discover the wellness benefits of standing while you work.</p>
+      <a href="products.html" class="cta-button">Shop Standing Desks</a>
     </header>
 
-    <section class="hero">
-      <h1>Transform Your Workspace</h1>
-      <p>
-        Discover the benefits of standing desks for health and productivity.
-      </p>
-      <a href="#" class="cta-button">Explore Desks</a>
-    </section>
+    <div class="container">
+      <div class="hero"></div>
 
-    <section class="features">
-      <h2>Why Choose a Standing Desk?</h2>
-      <div class="feature-item">
-        <img src="images/computer-desk.jpg" alt="Health Benefits" />
-        <h3>Boost Your Health</h3>
-        <p>Standing desks help reduce back pain and improve posture.</p>
-      </div>
-      <div class="feature-item">
-        <img src="images/dual-monitor.jpg" alt="Productivity Benefits" />
-        <h3>Increase Productivity</h3>
+      <div class="section">
+        <h2>Why Stand While You Work?</h2>
         <p>
-          Standing while working keeps you energized and focused throughout the
-          day.
+          Many of us spend long hours sitting, which can contribute to health
+          concerns. Switching to a standing desk can be a game-changer for your
+          well-being, boosting energy and focus throughout the day.
         </p>
       </div>
-      <div class="feature-item">
-        <img src="/images/standing-desk-office.webp" alt="Ergonomics" />
-        <h3>Ergonomic Design</h3>
-        <p>
-          Adjustable standing desks allow you to find the perfect height for
-          your workspace.
-        </p>
-      </div>
-    </section>
 
-    <section class="product-showcase">
-      <h2>Featured Products</h2>
-      <div class="product-item">
-        <img src="images/computer-desk.jpg" alt="Laptop Standing Desk" />
-        <h3>Laptop Standing Desk</h3>
-        <p>Ideal for compact workspaces and home offices.</p>
-        <a href="#" class="cta-button">View More</a>
+      <div class="section">
+        <h2>Key Benefits of Using a Standing Desk</h2>
+        <ul>
+          <li>
+            <strong>Improved Posture:</strong> A standing desk encourages
+            healthier posture, reducing neck and back pain over time.
+          </li>
+          <li>
+            <strong>Increased Energy Levels:</strong> Standing helps maintain
+            circulation, leading to higher energy and focus.
+          </li>
+          <li>
+            <strong>Reduced Risk of Health Issues:</strong> Standing may lower
+            the risks associated with prolonged sitting, supporting
+            cardiovascular health.
+          </li>
+          <li>
+            <strong>Better Focus:</strong> Enhanced concentration and engagement
+            with tasks.
+          </li>
+          <li>
+            <strong>Burn More Calories:</strong> Standing burns slightly more
+            calories than sitting.
+          </li>
+          <li>
+            <strong>Improved Mood:</strong> Regularly standing can elevate mood
+            and reduce stress.
+          </li>
+        </ul>
       </div>
-      <div class="product-item">
-        <img src="images/dual-monitor.jpg" alt="Full-Size Standing Desk" />
-        <h3>Full-Size Standing Desk</h3>
-        <p>Perfect for larger work environments.</p>
-        <a href="#" class="cta-button">View More</a>
-      </div>
-      <div class="product-item">
-        <img src="images/standing-desk-office.webp" alt="Adjustable Desk" />
-        <h3>Adjustable Standing Desk</h3>
-        <p>Designed for maximum flexibility and comfort.</p>
-        <a href="#" class="cta-button">View More</a>
-      </div>
-    </section>
 
-    <section class="testimonials">
-      <h2>What Our Customers Say</h2>
-      <blockquote>
+      <div class="section">
+        <h2>Tips for Adjusting to a Standing Desk</h2>
         <p>
-          "Switching to a standing desk has completely transformed my workday. I
-          feel more energized and productive!"
+          Transitioning to a standing desk might take some time. Here are a few
+          tips:
         </p>
-        <footer>- John D.</footer>
-      </blockquote>
-    </section>
+        <ul>
+          <li>Alternate between sitting and standing every 30-60 minutes.</li>
+          <li>Invest in anti-fatigue mats to reduce leg fatigue.</li>
+          <li>Wear comfortable shoes with good arch support.</li>
+        </ul>
+        <a href="products.html" class="cta-button"
+          >Discover Our Standing Desks</a
+        >
+      </div>
+
+      <div class="section">
+        <h2>Customer Success Stories</h2>
+        <div class="testimonial">
+          <p>
+            "Since I started using this standing desk, my back pain has reduced,
+            and I feel much more energized throughout the workday!" – Sarah T.
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Switching to a standing desk was the best decision for my
+            productivity and health!" – John D.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Ready to Make the Switch?</h2>
+        <p>
+          Prioritize your health and productivity today. Find the perfect
+          standing desk to fit your lifestyle and start experiencing the
+          benefits!
+        </p>
+        <a href="products.html" class="cta-button">Shop Now</a>
+      </div>
+    </div>
 
     <footer>
-      <p>&copy; 2024 Standing Desk Hub. All rights reserved.</p>
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-      </ul>
+      <p>&copy; 2024 Your Company Name. All rights reserved.</p>
     </footer>
   </body>
 </html>
