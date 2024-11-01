@@ -92,7 +92,7 @@ section {
 .product-container {
   border: 1px solid #cacaca;
   position: relative;
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(255, 255, 255);
   justify-content: start;
   border-radius: 5px;
   overflow: hidden;
@@ -114,6 +114,7 @@ section {
 
 .image-container {
   height: 200px;
+  overflow: hidden;
 }
 
 .product-image {
@@ -121,8 +122,16 @@ section {
   height: 100%;
   min-height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
   flex: 1;
+  transition-property: height, width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.product-container:hover .product-image {
+  height: 110%;
+  width: 110%;
 }
 
 .product-description,
@@ -151,6 +160,21 @@ section {
   line-height: 1.3;
 }
 
+.selection-container {
+  margin: 5px 0;
+}
+
+.selection-container select {
+  height: 35px;
+  width: 80px;
+  border: 2px solid gray;
+  border-radius: 2px;
+}
+
+.selection-container select:focus {
+  outline: 2px solid var(--highlight-color);
+}
+
 .add-button {
   padding: 5px 10px;
   cursor: pointer;
@@ -159,17 +183,34 @@ section {
   position: relative;
 }
 
+.add-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 255, 0.562);
+  z-index: 3;
+  transform: translate(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.add-button:hover::before {
+  transform: translate(0);
+  opacity: 1;
+}
+
 .add-button.added::after {
   content: "Added";
   position: absolute;
   bottom: 110%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(95, 95, 95, 0.918);
+  background-color: rgb(95, 95, 95);
   padding: 5px;
   border-radius: 5px;
   pointer-events: none;
   color: white;
+  opacity: 1;
 }
 
 .add-button:focus {
@@ -180,10 +221,6 @@ section {
   color: blue;
   cursor: pointer;
   text-decoration: underline;
-}
-
-button:hover {
-  opacity: 0.75;
 }
 
 @media (max-width: 400px) {

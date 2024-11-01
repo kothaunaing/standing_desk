@@ -72,7 +72,7 @@ function renderAccordion() {
         <div class="accordion-item">
             <button class="accordion-header">
               <div>${item.question}</div>
-              <i class="fa fa-plus"></i>
+              <i class="fa fa-chevron-down"></i>
             </button>
             <div class="accordion-content">
               <p>
@@ -91,7 +91,6 @@ renderAccordion();
 document.querySelectorAll(".accordion-header").forEach((button) => {
   button.addEventListener("click", () => {
     const accordionContent = button.nextElementSibling;
-    const plusIcon = button.children[1];
 
     button.classList.toggle("active");
 
@@ -99,11 +98,9 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
       accordionContent.style.maxHeight =
         accordionContent.scrollHeight + 15 + "px";
       accordionContent.style.padding = "10px 5px";
-      plusIcon.className = "fa fa-minus";
     } else {
       accordionContent.style.maxHeight = "0";
       accordionContent.style.padding = "0 5px";
-      plusIcon.className = "fa fa-plus";
     }
   });
 });

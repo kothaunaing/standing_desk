@@ -1,15 +1,16 @@
+:root {
+  --header-background: rgb(171, 220, 255);
+}
+
 .accordion {
-  display: grid;
-  gap: 8px;
   padding: 5px;
   width: 100%;
 }
 
 .accordion-item {
   border: none;
-  box-shadow: 0 0 4px var(--primary-color);
+  border-bottom: 1px solid gray;
   overflow: hidden;
-  border-radius: 5px;
 }
 
 .accordion-header {
@@ -25,18 +26,29 @@
   transition: background-color 0.3s ease;
 }
 
+.accordion-header div {
+  text-align: left;
+}
 .accordion-header:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--header-background);
 }
 
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.4s ease;
 }
 
 .accordion-header.active {
-  background-color: var(--secondary-color);
+  background-color: var(--header-background);
+}
+
+.fa-chevron-down {
+  transition: transform 0.4s ease;
+}
+
+.accordion-header.active .fa-chevron-down {
+  transform: rotate(180deg);
 }
 
 p {

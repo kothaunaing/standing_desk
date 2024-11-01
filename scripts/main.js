@@ -24,6 +24,7 @@ try {
     backSpeed: 150,
     loop: true,
     smartBackspace: true,
+    shuffle: true,
   });
 } catch (error) {
   console.log(error.message);
@@ -34,24 +35,29 @@ try {
 const slideShowsContainer = _(".slideshow-container");
 const slideShows = [
   {
-    image: "product-1.webp",
-    caption: "This is good",
+    image: "product-1.jpg",
+    caption:
+      "ErGear Height Adjustable Electric Standing Desk, 48 x 24 Inches Sit Stand up Desk, Memory Computer Home Office Desk (Black)",
   },
   {
-    image: "product-2.png",
-    caption: "This is very good",
+    image: "product-2.jpg",
+    caption:
+      "SMUG Standing Desk, Adjustable Height Electric Sit Stand Up Down Computer Table, 40x24 Inch Ergonomic Rising Desks for Work Office Home, Modern Lift Motorized Gaming Desktop Workstation, White",
   },
   {
     image: "product-3.jpg",
-    caption: "This is very very good",
+    caption:
+      "Marsail Standing Desk Adjustable Height Home Office Desk, 48x24 Inch Electric Standing Desk, Stand up Desk with Storage Bag,Headphone Hook for Computer Workstations Desk Memory Preset",
   },
   {
-    image: "product-4.webp",
-    caption: "Good desk",
+    image: "product-4.jpg",
+    caption:
+      "GTRACING 55 Inch Gaming Desk, Computer Gamer Desk with Monitor Stand, Ergonomic Carbon Fiber Surface Gaming Table with Power Outlet and Mouse Pad for Home Office, RGB",
   },
   {
-    image: "product-5.webp",
-    caption: "Standing desk",
+    image: "product-5.jpg",
+    caption:
+      "63 x 24 Inches Standing Desk Adjustable Height with Splice Board- Stand Up Desk, Electric Standing Desk, Sit to Stand Desk for Home & Office Computer Desk",
   },
 ];
 
@@ -64,7 +70,9 @@ function renderSlideshows() {
             <div class="number">${i + 1} / ${slideShows.length}</div>
             <img alt="${
               slide.image
-            }" class="slideshow-image" src="assets/images/${slide.image}" />
+            }" class="slideshow-image" src="assets/images/slideshows/${
+      slide.image
+    }" />
             <div class="caption">
               <p>${slide.caption}</p>
             </div>

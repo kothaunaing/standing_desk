@@ -141,6 +141,14 @@ nav ul {
   transform: translate(0);
 }
 
+.fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
 .dropdown ul li {
   padding: 10px;
   text-wrap: nowrap;
@@ -149,7 +157,7 @@ nav ul {
 }
 
 .dropdown ul li:hover {
-  background-color: #be8484;
+  background-color: #fff3e2;
 }
 
 .fa-chevron-down {

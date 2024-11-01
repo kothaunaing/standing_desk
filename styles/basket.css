@@ -11,6 +11,37 @@ main {
 section {
   max-width: 800px;
   margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.order-summary {
+  border: 1px solid rgb(179, 179, 179);
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.order-summary > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-summary div {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  color: rgb(66, 66, 66);
+  font-size: 1.1rem;
+}
+
+td {
+  text-align: right;
 }
 
 .baskets-container {
@@ -21,7 +52,7 @@ section {
 
 .basket-container {
   box-shadow: 0 0 5px gray;
-
+  background-color: rgb(219, 237, 255);
   border-radius: 5px;
 
   display: flex;
@@ -53,16 +84,33 @@ section {
   font-size: 1.2rem;
 }
 
-.delete-button {
+.increase-button,
+.decrease-button {
+  height: 20px;
+  width: 20px;
+  text-align: center;
   border: none;
-  background-color: rgb(211, 211, 211);
   cursor: pointer;
-  padding: 2px;
+  background-color: rgb(224, 224, 224);
   border-radius: 5px;
 }
 
+.increase-button:hover,
+.decrease-button:hover {
+  opacity: 0.75;
+}
+
+.delete-button {
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 5px;
+  color: blue;
+}
+
 .delete-button:hover {
-  opacity: 0.7;
+  text-decoration: underline;
 }
 
 h1 {

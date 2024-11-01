@@ -1,4 +1,5 @@
 const productsContainer = _(".products-container");
+const timeoutIds = [];
 
 function _(selector) {
   return document.querySelector(selector);
@@ -32,7 +33,9 @@ function renderProducts(products) {
               >
                 <img alt="${
                   product.name
-                }" class="product-image" src="assets/images/${product.image}" />
+                }" class="product-image" src="assets/images/products/${
+      product.image
+    }" />
               </div>
   
               <div class="product-info">
@@ -41,7 +44,18 @@ function renderProducts(products) {
                   product.description,
                   40
                 )}</div>
-                <div class="button-container">
+ 
+                <div class="selection-container">
+                  <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+
+                  <div class="button-container"> 
                   <button class="add-button" data-product-id="${
                     product.id
                   }">Add to basket</button>
@@ -55,13 +69,17 @@ function renderProducts(products) {
 
   const buyBtns = document.querySelectorAll(".add-button");
 
-  buyBtns.forEach((btn) => {
+  buyBtns.forEach((btn, index) => {
     const { productId } = btn.dataset;
     btn.addEventListener("click", () => {
       let matchingProduct;
       btn.classList.add("added");
 
-      timeoutId = setTimeout(() => {
+      if (timeoutIds[index]) {
+        clearTimeout(timeoutIds[index]);
+      }
+
+      timeoutIds[index] = setTimeout(() => {
         btn.classList.remove("added");
       }, 3000);
 
@@ -123,6 +141,8 @@ searchButton.addEventListener("click", () => {
 });
 
 function searchProducts(keyword) {
+  if (!keyword.trim()) return;
+
   const newProducts = products.filter((product) => {
     let found = false;
 

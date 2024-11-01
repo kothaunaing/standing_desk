@@ -39,6 +39,7 @@
   background-color: var(--primary-color);
   border-radius: 5px;
   transition: box-shadow 0.3s ease;
+  margin-top: 20px;
 }
 
 .shop-now-button:hover {

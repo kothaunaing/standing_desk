@@ -5,7 +5,7 @@ const products = [
     description:
       "A sleek and modern standing desk with adjustable height settings and a sturdy frame.",
     price: 399.99,
-    image: "computer-desk.jpg",
+    image: "product-1.jpg",
     imageUrl: "https://example.com/images/premium-adjustable-standing-desk.jpg",
     features: [
       "Electric height adjustment",
@@ -27,7 +27,7 @@ const products = [
     description:
       "A stylish standing desk made from sustainable bamboo, perfect for eco-conscious users.",
     price: 349.99,
-    image: "computer-desk.jpg",
+    image: "product-2.jpg",
     imageUrl:
       "https://example.com/images/eco-friendly-bamboo-standing-desk.jpg",
     features: [
@@ -73,7 +73,7 @@ const products = [
     description:
       "Maximize your workspace with this L-shaped standing desk, perfect for multitasking.",
     price: 499.99,
-    image: "product-2.png",
+    image: "product-4.jpg",
     imageUrl: "https://example.com/images/l-shaped-corner-standing-desk.jpg",
     features: [
       "Electric height adjustment",
@@ -92,7 +92,7 @@ const products = [
   {
     id: 5,
     name: "Ergonomic Sit-Stand Desk Converter",
-    image: "product-3.jpg",
+    image: "product-5.jpg",
     description:
       "Transform any desk into a standing desk with this easy-to-use sit-stand converter.",
     price: 149.99,
@@ -116,7 +116,7 @@ const products = [
     id: 6,
     image: "computer-desk.jpg",
     name: "Electric Height Adjustable Standing Desk",
-    image: "product-5.webp",
+    image: "product-6.jpg",
     description:
       "A versatile standing desk with electric height adjustment for seamless transitions between sitting and standing.",
     price: 429.99,
@@ -142,6 +142,7 @@ const products = [
     description:
       "This sit-stand desk features memory settings for quick height adjustments, making it perfect for shared workspaces.",
     price: 459.99,
+    image: "product-7.jpg",
     imageUrl:
       "https://example.com/images/sit-stand-desk-with-memory-settings.jpg",
     features: [
@@ -164,6 +165,7 @@ const products = [
     description:
       "A practical standing desk featuring a storage drawer, ideal for keeping your workspace organized.",
     price: 399.99,
+    image: "product-8.jpg",
     imageUrl:
       "https://example.com/images/height-adjustable-standing-desk-with-drawer.jpg",
     features: [
@@ -186,6 +188,7 @@ const products = [
     description:
       "This innovative standing desk can be controlled via a mobile app, allowing for personalized height settings and reminders.",
     price: 599.99,
+    image: "product-9.jpg",
     imageUrl:
       "https://example.com/images/smart-standing-desk-with-app-control.jpg",
     features: [
@@ -208,6 +211,7 @@ const products = [
     description:
       "A unique standing desk that features built-in LED lighting to create a vibrant workspace.",
     price: 479.99,
+    image: "product-10.jpg",
     imageUrl:
       "https://example.com/images/adjustable-standing-desk-with-led-lighting.jpg",
     features: [
