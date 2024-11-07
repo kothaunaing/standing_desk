@@ -1,28 +1,58 @@
 main {
-  margin: 5px;
 }
 
 section {
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  border-radius: 5px;
-  margin: 0 auto;
+  margin: 5px auto;
   margin-bottom: 10px;
   max-width: 800px;
-  box-shadow: 0 0 5px black;
 }
 
-h1 {
+@media (max-width: 500px) {
+  section {
+    margin: 5px 5px;
+  }
+}
+
+section p {
+  margin: 5px;
+}
+
+section p::first-letter,
+.quote {
   font-size: 1.5rem;
+  color: rgb(59, 59, 59);
+  text-shadow: 0 0 5px rgb(63, 63, 63);
 }
 
-h1,
-li,
-p {
-  line-height: 1.5;
+.video-hero {
+  position: relative;
+  max-width: unset;
+  margin: 0;
 }
 
-.cta-button {
+.video-hero video {
+  height: 400px;
+  width: 100%;
+  background-size: contain;
+  background-position: top;
+
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.411);
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-content a {
   padding: 10px;
   background-color: blue;
   text-decoration: none;
@@ -30,12 +60,40 @@ p {
   border-radius: 5px;
 }
 
-.cta-button:hover {
-  opacity: 0.7;
+.hero-content a:hover {
+  opacity: 0.75;
+}
+
+.hero-content p {
+  padding: 10px;
+  color: white;
+
+  font-size: 1.3rem;
+}
+
+.hero-content p::first-letter {
+  font-size: unset;
+  color: unset;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: rgb(97, 97, 97);
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h1,
+section li,
+section p {
+  line-height: 1.5;
 }
 
 .testimonial {
   border-left: 6px solid blue;
   padding-left: 5px;
   background-color: rgb(230, 230, 230);
+  margin-bottom: 20px;
 }

@@ -30,7 +30,8 @@
   text-align: left;
 }
 .accordion-header:hover {
-  background-color: var(--header-background);
+  /* background-color: var(--header-background); */
+  background-color: #e0e0e0;
 }
 
 .accordion-content {
@@ -40,7 +41,8 @@
 }
 
 .accordion-header.active {
-  background-color: var(--header-background);
+  /* background-color: var(--header-background); */
+  background-color: #e0e0e0;
 }
 
 .fa-chevron-down {

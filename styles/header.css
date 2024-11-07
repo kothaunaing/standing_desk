@@ -44,7 +44,7 @@
   height: 3px;
   background: var(--gradient-color);
   left: 40px;
-  background-color: rgb(31, 31, 31);
+
   width: 100%;
   transition-property: left, opacity;
   transition-duration: 0.3s;

@@ -28,7 +28,10 @@ function renderProducts(products) {
   products.forEach((product) => {
     html += `
           <div class="product-container">
-              <div class="price">$${product.price.toFixed(2)} </div>
+              <div class="price">${getPrice(
+                product.price,
+                product?.discount
+              )} </div>
               <div class="image-container"
               >
                 <img alt="${
@@ -47,11 +50,17 @@ function renderProducts(products) {
  
                 <div class="selection-container">
                   <select>
-                    <option>1</option>
+                    <option selected>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
                     <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    
                   </select>
                 </div>
 
@@ -72,6 +81,10 @@ function renderProducts(products) {
   buyBtns.forEach((btn, index) => {
     const { productId } = btn.dataset;
     btn.addEventListener("click", () => {
+      const selectedValue = Number(
+        btn.parentElement.previousElementSibling.children[0].value
+      );
+
       let matchingProduct;
       btn.classList.add("added");
 
@@ -90,17 +103,16 @@ function renderProducts(products) {
       });
 
       if (matchingProduct) {
-        matchingProduct.items++;
+        matchingProduct.items += selectedValue;
       } else {
         baskets.push({
           id: productId,
-          items: 1,
+          items: selectedValue,
         });
       }
 
       updateBasketCounts();
       saveBasketsToLocalStorage();
-      console.log(baskets);
     });
   });
 
@@ -147,8 +159,12 @@ function searchProducts(keyword) {
     let found = false;
 
     if (
-      product.keywords.includes(keyword.toLowerCase().trim()) ||
-      product.name.toLowerCase().includes(keyword.toLowerCase().trim())
+      product.name
+        .toLowerCase()
+        .includes(keyword.trim().toLowerCase().trim()) ||
+      product.description
+        .toLocaleLowerCase()
+        .includes(keyword.trim().toLowerCase())
     ) {
       found = true;
     }
@@ -173,4 +189,20 @@ function getButton(text, length = 20) {
 
 function getShort(text, length = 20) {
   return `${text.slice(0, length)}...`;
+}
+
+function getPrice(price, discount) {
+  const newPrice = discount
+    ? (price - price * (discount / 100)).toFixed(2)
+    : price;
+
+  const html = `
+  ${
+    discount
+      ? `<del>$${price}</del> (-${discount}%)  $${newPrice} `
+      : "$" + price
+  }
+  `;
+
+  return html;
 }

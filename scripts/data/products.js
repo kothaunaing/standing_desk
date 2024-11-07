@@ -1,232 +1,101 @@
 const products = [
   {
     id: 1,
-    name: "Premium Adjustable Standing Desk",
+    name: "ErGear Height Adjustable Electric Standing Desk",
     description:
-      "A sleek and modern standing desk with adjustable height settings and a sturdy frame.",
+      "48 x 24 Inches Sit Stand up Desk, Memory Computer Home Office Desk (Black)",
     price: 399.99,
+
     image: "product-1.jpg",
-    imageUrl: "https://example.com/images/premium-adjustable-standing-desk.jpg",
-    features: [
-      "Electric height adjustment",
-      "Spacious work surface",
-      "Built-in cable management",
-      "Heavy-duty steel frame",
-      "Easy assembly",
-    ],
-    keywords: [
-      "adjustable standing desk",
-      "electric standing desk",
-      "modern office furniture",
-      "height adjustable desk",
-    ],
   },
   {
     id: 2,
-    name: "Eco-Friendly Bamboo Standing Desk",
+    name: "SMUG Standing Desk",
     description:
-      "A stylish standing desk made from sustainable bamboo, perfect for eco-conscious users.",
+      "Adjustable Height Electric Sit Stand Up Down Computer Table, 40x24 Inch Ergonomic Rising Desks for Work Office Home, Modern Lift Motorized Gaming Desktop Workstation, White",
     price: 349.99,
+    discount: 40,
     image: "product-2.jpg",
-    imageUrl:
-      "https://example.com/images/eco-friendly-bamboo-standing-desk.jpg",
-    features: [
-      "Natural bamboo finish",
-      "Manual height adjustment",
-      "Durable and eco-friendly materials",
-      "Minimalist design",
-      "Lightweight and portable",
-    ],
-    keywords: [
-      "bamboo standing desk",
-      "eco-friendly desk",
-      "sustainable furniture",
-      "green office",
-    ],
+    caption:
+      "SMUG Standing Desk, Adjustable Height Electric Sit Stand Up Down Computer Table. This desk helps blood flow better by allowing you to switch from sitting to standing easily.",
   },
   {
     id: 3,
-    name: "Compact Folding Standing Desk",
+    name: "Marsail Electric Standing Desk Adjustable Height",
     description:
-      "An ideal standing desk for small spaces, featuring a foldable design for easy storage.",
+      "48 * 24 Inch Sit Stand up Desk for Home Office Furniture Computer Desk with 3 Memory Presets, Headphone Hook, Black",
     price: 199.99,
 
     image: "product-3.jpg",
-    imageUrl: "https://example.com/images/compact-folding-standing-desk.jpg",
-    features: [
-      "Foldable for easy storage",
-      "Lightweight design",
-      "Simple height adjustment",
-      "Ideal for home offices",
-      "Sturdy construction",
-    ],
-    keywords: [
-      "folding standing desk",
-      "compact desk",
-      "small space furniture",
-      "portable standing desk",
-    ],
   },
   {
     id: 4,
-    name: "L-Shaped Corner Standing Desk",
+    name: "GTRACING 55 Inch Gaming Desk",
     description:
-      "Maximize your workspace with this L-shaped standing desk, perfect for multitasking.",
+      "Computer Gamer Desk with Monitor Stand, Ergonomic Carbon Fiber Surface Gaming Table with Power Outlet and Mouse Pad for Home Office, RGB",
     price: 499.99,
+    discount: 20,
     image: "product-4.jpg",
-    imageUrl: "https://example.com/images/l-shaped-corner-standing-desk.jpg",
-    features: [
-      "Electric height adjustment",
-      "Spacious L-shaped surface",
-      "Sturdy metal frame",
-      "Cable management system",
-      "Modern aesthetic",
-    ],
-    keywords: [
-      "L-shaped desk",
-      "corner standing desk",
-      "multitasking furniture",
-      "ergonomic office desk",
-    ],
+    caption:
+      "GTRACING 55 Inch Gaming Desk, Computer Gamer Desk with Monitor Stand. This desk can help burn more calories which lower the risk of weight gain.",
   },
   {
     id: 5,
-    name: "Ergonomic Sit-Stand Desk Converter",
+    name: "Whole Piece Electric Standing Desk",
     image: "product-5.jpg",
     description:
-      "Transform any desk into a standing desk with this easy-to-use sit-stand converter.",
+      "Height Adjustable Stand up Desk, Sit to Stand Desk with Wheels for Home Office & Computer Workstation",
     price: 149.99,
-    imageUrl:
-      "https://example.com/images/ergonomic-sit-stand-desk-converter.jpg",
-    features: [
-      "Adjustable height settings",
-      "Compact and lightweight",
-      "Fits on any desk",
-      "Easy to set up",
-      "Enhances productivity",
-    ],
-    keywords: [
-      "desk converter",
-      "sit-stand converter",
-      "ergonomic desk",
-      "standing desk accessories",
-    ],
+    discount: 30,
+    caption:
+      "63 x 24 Inches Standing Desk Adjustable Height with Splice Board- Stand Up Desk. This desk can reduce pain in joints by letting you set the height that feels best.",
   },
   {
     id: 6,
     image: "computer-desk.jpg",
-    name: "Electric Height Adjustable Standing Desk",
+    name: "Realspace® P20 Standing Desk",
     image: "product-6.jpg",
     description:
-      "A versatile standing desk with electric height adjustment for seamless transitions between sitting and standing.",
+      'Realspace® P20 Standing Desk Converter With USB And Keyboard Tray, 19-3/10"H x 35-2/5"W x 23-1/5"D, Black',
     price: 429.99,
-    imageUrl:
-      "https://example.com/images/electric-height-adjustable-standing-desk.jpg",
-    features: [
-      "Programmable height settings",
-      "Sturdy frame with anti-collision technology",
-      "Wide range of height adjustments",
-      "Sleek and modern design",
-      "Easy to operate",
-    ],
-    keywords: [
-      "electric height adjustable desk",
-      "smart standing desk",
-      "programmable desk",
-      "modern workspace",
-    ],
   },
   {
     id: 7,
-    name: "Sit-Stand Desk with Memory Settings",
+    name: "Rocelco 32 Height Adjustable Standing Desk Converter",
     description:
-      "This sit-stand desk features memory settings for quick height adjustments, making it perfect for shared workspaces.",
+      "Quick Sit Stand Up Dual Monitor Riser - Gas Spring Assist Tabletop Computer Workstation - Large Retractable Keyboard Tray - Black (R ADRB)",
     price: 459.99,
+    discount: 50,
     image: "product-7.jpg",
-    imageUrl:
-      "https://example.com/images/sit-stand-desk-with-memory-settings.jpg",
-    features: [
-      "Three programmable height presets",
-      "Smooth electric lift system",
-      "Durable and stylish finish",
-      "Easy to assemble",
-      "Robust design",
-    ],
-    keywords: [
-      "memory sit-stand desk",
-      "adjustable height desk",
-      "electric desk with presets",
-      "shared workspace desk",
-    ],
+    caption:
+      "Marsail Standing Desk Adjustable Height Home Office Desk. This desk reduces muscle stiffness by allowing you to standing up without changing whole desk setup.",
   },
   {
     id: 8,
-    name: "Height Adjustable Standing Desk with Drawer",
+    name: "Rtisgunpro 55x24inch Adjustable Desk",
     description:
-      "A practical standing desk featuring a storage drawer, ideal for keeping your workspace organized.",
+      "Stand up Desk Electric Standing Desk Adjustable Height Sit Stand Home Office Desk Including Splice Table Plate",
     price: 399.99,
     image: "product-8.jpg",
-    imageUrl:
-      "https://example.com/images/height-adjustable-standing-desk-with-drawer.jpg",
-    features: [
-      "Electric height adjustment",
-      "Integrated storage drawer",
-      "Stylish and functional design",
-      "Sturdy construction",
-      "Perfect for home offices",
-    ],
-    keywords: [
-      "standing desk with drawer",
-      "height adjustable desk",
-      "functional office furniture",
-      "storage desk",
-    ],
   },
   {
     id: 9,
-    name: "Smart Standing Desk with App Control",
+    name: "Realspace® Electric Standing Desk",
     description:
-      "This innovative standing desk can be controlled via a mobile app, allowing for personalized height settings and reminders.",
+      'Realspace® Electric 48"W Height-Adjustable Standing Desk, Black',
     price: 599.99,
     image: "product-9.jpg",
-    imageUrl:
-      "https://example.com/images/smart-standing-desk-with-app-control.jpg",
-    features: [
-      "Mobile app connectivity",
-      "Personalized height settings",
-      "Health reminder notifications",
-      "Sleek modern design",
-      "Robust and stable structure",
-    ],
-    keywords: [
-      "smart desk",
-      "app-controlled desk",
-      "height adjustable desk with app",
-      "modern office technology",
-    ],
   },
   {
     id: 10,
-    name: "Adjustable Standing Desk with LED Lighting",
+    name: "JOY worker Mobile Standing Desk",
     description:
-      "A unique standing desk that features built-in LED lighting to create a vibrant workspace.",
+      "Height Adjustable Table, 60° Tiltable Rolling Laptop Desk, Portable Sit Stand Desk with Wheels Cup Holder for Bed Couch Hospital, Holds Up to 22lbs, Black",
     price: 479.99,
     image: "product-10.jpg",
-    imageUrl:
-      "https://example.com/images/adjustable-standing-desk-with-led-lighting.jpg",
-    features: [
-      "Electric height adjustment",
-      "Integrated LED lighting",
-      "Sleek and stylish design",
-      "Easy assembly",
-      "Durable frame",
-    ],
-    keywords: [
-      "standing desk with LED lights",
-      "adjustable desk with lighting",
-      "modern workspace",
-      "creative office furniture",
-    ],
+    discount: 30,
+    caption:
+      "ErGear Height Adjustable Electric Standing Desk. This desk helps you stand straight, that can reduce back pain.",
   },
 ];
 

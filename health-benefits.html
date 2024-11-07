@@ -1,170 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      href="assets/favicon/standing-desk.jpg"
-      type="image/x-icon"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/health-benefits.css" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="assets/favicon/standing-desk.jpg" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/footer.css" />
-    <!-- Font awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/health-benefits.css" />
 
-    <title>SDC | Health Benefits</title>
-  </head>
-  <body>
-    <div class="popup" id="welcome-popup">
+  <link rel="stylesheet" href="styles/footer.css" />
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <title>SDC | Health Benefits</title>
+</head>
+
+<body>
+  <div class="popup" id="welcome-popup">
+    <div>
+      <h1>Welcome to The Standing Desk Company</h1>
+      <button id="close-welcome-popup"><i class="fa fa-close"></i></button>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="main-header">
+    <button class="close-button"></button>
+    <a class="logo-text" href="index.html">
+      <span class="first-word">STANDING</span>
+      <span class="second-word">DESK</span>
+    </a>
+    <nav class="nav-bar">
+      <ul>
+        <li class="nav-link">
+          <a href="index.html">Home</a>
+        </li>
+
+        <li class="dropdown nav-link">
+          <a href="#"><i class="fa fa-chevron-down xs" style="font-size: 13px; margin-right: 3px"></i>Products</a>
+          <ul>
+            <li><a href="desks.html">Rising Desks</a></li>
+            <li><a href="basket.html">Basket</a></li>
+          </ul>
+        </li>
+        <li class="nav-link">
+          <a class="active" href="health-benefits.html">Health Benefits</a>
+        </li>
+        <li class="nav-link"><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section class="video-hero">
+      <video autoplay muted loop>
+        <source src="assets/videos/health-benefits.mp4">
+      </video>
+      <div class="hero-content">
+        <p>Sitting too much is bad for your health. People who sit a lot have increased risk of diabetes, heart disease
+          and early death. </p>
+        <a href="desks.html">
+          Explore Desks
+        </a>
+      </div>
+    </section>
+    <section>
+      <h1>About Standing Desks</h1>
+      <p>
+        A standing desk is a kind of desk that allows you to stand up while working. Many new desks allow you to change
+        the height, so you can sit or stand when you want. These desks are called height-adjustable desks or sit-stand
+        desks.
+      </p>
+      <p>
+        Research is still new, but using standing desks can be very good for your health and help you work better. At
+        least, using standing desks can help reduce some of the bad effects of sitting too much.
+      </p>
+      <p>
+        The following are some of the <b><i>health benefits</i></b> of using standing desks.
+      </p>
+
+      <ul>
+        <li>
+          <h2>Standing Desks Can Help Prevent Weight Gain</h2>
+          <p>
+            Standing instead of sitting can help burn more calories that can reduce the risk of weight gain and obesity.
+            Standing for an afternoon burns up to 170 calories, which is 1,000 calories per week in total.
+          </p>
+
+        </li>
+        <li>
+          <h2>Standing Desks Can Help Lower Blood Sugar Levels </h2>
+          <p>
+            Standing after meals can reduce sugar spikes, which is good for people with type 2 diabets. In one of the
+            studies, standing for 180 minutes after lunch reduced blood sugar spikes by 43% compared to sitting.
+          </p>
+
+          <p class="testimonial">
+            Studies show that using a standing desk at work can lower blood sugar levels, especially after lunch.
+          </p>
+        </li>
+        <li>
+          <h2>Standing Desks Can Reduce Back Pain</h2>
+          <p>
+            Long hours of sitting can lead to back pain, especially in the lower back. Studies show that using a
+            standing desk can reduce chronic back pain. For example, one study found that participants who used standing
+            desks for a few weeks reported a 32% reduction in lower back pain.
+          </p>
+        </li>
+        <li>
+          <h2>Standing Desks May Improve Mood and Energy Levels</h2>
+          <p>
+            Long hours of sitting can lead to back pain, especially in the lower back. Studies show that using a
+            standing desk can reduce chronic back pain. For example, one study found that participants who used standing
+            desks for a few weeks reported a 32% reduction in lower back pain.
+          </p>
+        </li>
+        <li>
+          <h2>Standing Desks May Lower the Risk of Heart Disease</h2>
+          <p>
+            Sitting for long periods has been linked to heart disease. Studies suggest that standing instead of sitting
+            may help lower this risk. Research shows that prolonged sitting can increase the risk of heart disease by up
+            to 147%, so using a standing desk may contribute to better heart health.
+          </p>
+        </li>
+        <li>
+          <h2>Standing Desks Can Boost Productivity</h2>
+          <p>
+            Alternating between sitting and standing may help increase productivity. Standing desks can improve focus,
+            energy, and engagement, which can be helpful for tasks requiring attention. Some studies found that people
+            using standing desks showed improved productivity over time without affecting work accuracy.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="success-stories">
+      <h1>Customer Success Stories</h1>
+      <div class="testimonial">
+        <p>
+          <span class="quote">"</span>Since I started using this standing desk, my back pain has reduced,
+          and I feel much more energized throughout the workday!<span class="quote">"</span> – Sarah T.
+        </p>
+      </div>
+      <div class="testimonial">
+        <p>
+          <span class="quote">"</span>Switching to a standing desk was the best decision for my
+          productivity and health!<span class="quote">"</span> – John D.
+        </p>
+      </div>
+      <div class="testimonial">
+        <p>
+          <span class="quote">"</span>Sitting all day was killing my back. Since I started using a standing desk, the
+          pain has really eased up. I’m so much more comfortable now!" — Mark, Graphic Designer<span
+            class="quote">"</span> – John D.
+        </p>
+      </div>
+      <div class="testimonial">
+        <p>
+          <span class="quote">"</span>Standing throughout the day keeps my energy up, and I've noticed my team is more
+          upbeat, too. It’s amazing how a small change can make work more enjoyable!" — Rachel, Team Manager<span
+            class="quote">"</span> – John D.
+        </p>
+      </div>
+      <div class="testimonial">
+        <p>
+          <span class="quote">"</span>I was feeling sluggish and noticed I was gaining weight. Standing a few hours a
+          day at my desk made a huge difference — I’m feeling healthier and more active." — Alex, Marketing
+          Specialist<span class="quote">"</span> – John D.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
       <div>
-        <h1>Welcome to The Standing Desk Company</h1>
-        <button id="close-welcome-popup"><i class="fa fa-close"></i></button>
+        <h1>About Us</h1>
+        <p>
+          We provide the best products and services to make your life better.
+        </p>
+      </div>
+      <div>
+        <h1>Contact Us</h1>
+        <div>
+          <p>Email: <a href="mailto:standingdesk@company.com">standingdesk@company.com</a></p>
+          <p>Phone: +01234567</p>
+        </div>
+      </div>
+      <div>
+        <h1>Social Media</h1>
+        <div>
+          <p>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+          </p>
+        </div>
       </div>
     </div>
-    <!-- Header -->
-    <header class="main-header">
-      <button class="close-button"></button>
-      <a class="logo-text" href="index.html">
-        <span class="first-word">STANDING</span>
-        <span class="second-word">DESK</span>
-      </a>
-      <nav class="nav-bar">
-        <ul>
-          <li class="nav-link">
-            <a href="index.html">Home</a>
-          </li>
+    <div>
+      <p>© 2024 Standing Desk Company. All rights reserved</p>
+    </div>
+  </footer>
+  <!-- Script -->
 
-          <li class="dropdown nav-link">
-            <a href="#"
-              ><i
-                class="fa fa-chevron-down xs"
-                style="font-size: 13px; margin-right: 3px"
-              ></i
-              >Products</a
-            >
-            <ul>
-              <li><a href="desks.html">Rising Desks</a></li>
-              <li><a href="basket.html">Basket</a></li>
-            </ul>
-          </li>
-          <li class="nav-link">
-            <a class="active" href="health-benefits.html">Health Benefits</a>
-          </li>
-          <li class="nav-link"><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
+  <script src="scripts/header.js"></script>
+</body>
 
-    <!-- Main -->
-    <main>
-      <section>
-        <h1>Why Stand While You Work ?</h1>
-        <p>
-          Many of us spend long hours sitting, which can contribute to health
-          concerns. Switching to a standing desk can be a game-changer for your
-          well-being, boosting energy and focus throughout the day.
-        </p>
-      </section>
-      <section>
-        <h1>Key Benefits of Using a Standing Desk</h1>
-        <ul>
-          <li>
-            <strong>Improved Posture:</strong> A standing desk encourages
-            healthier posture, reducing neck and back pain over time.
-          </li>
-          <li>
-            <strong>Increased Energy Levels:</strong> Standing helps maintain
-            circulation, leading to higher energy and focus.
-          </li>
-          <li>
-            <strong>Reduced Risk of Health Issues:</strong> Standing may lower
-            the risks associated with prolonged sitting, supporting
-            cardiovascular health.
-          </li>
-          <li>
-            <strong>Better Focus:</strong> Enhanced concentration and engagement
-            with tasks.
-          </li>
-          <li>
-            <strong>Burn More Calories:</strong> Standing burns slightly more
-            calories than sitting.
-          </li>
-          <li>
-            <strong>Improved Mood:</strong> Regularly standing can elevate mood
-            and reduce stress.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h1>Tips for Adjusting to a Standing Desk</h1>
-        <p>
-          Transitioning to a standing desk might take some time. Here are a few
-          tips:
-        </p>
-        <ul>
-          <li>Alternate between sitting and standing every 30-60 minutes.</li>
-          <li>Invest in anti-fatigue mats to reduce leg fatigue.</li>
-          <li>Wear comfortable shoes with good arch support.</li>
-        </ul>
-        <a href="desks.html" class="cta-button">Discover Our Standing Desks</a>
-      </section>
-      <section>
-        <h1>Customer Success Stories</h1>
-        <div class="testimonial">
-          <p>
-            "Since I started using this standing desk, my back pain has reduced,
-            and I feel much more energized throughout the workday!" – Sarah T.
-          </p>
-        </div>
-        <div class="testimonial">
-          <p>
-            "Switching to a standing desk was the best decision for my
-            productivity and health!" – John D.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-      <div class="footer-content">
-        <div>
-          <h1>About Us</h1>
-          <p>
-            We provide the best products and services to make your life better.
-          </p>
-        </div>
-        <div>
-          <h1>Contact Us</h1>
-          <div>
-            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-            <p>Phone: +959665754562</p>
-          </div>
-        </div>
-        <div>
-          <h1>Social Media</h1>
-          <div>
-            <p>
-              <i class="fa fa-facebook"></i>
-              <i class="fa fa-twitter"></i>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <p>© 2024 Standing Desk. All rights reserved</p>
-      </div>
-    </footer>
-    <!-- Script -->
-
-    <script src="scripts/header.js"></script>
-  </body>
 </html>

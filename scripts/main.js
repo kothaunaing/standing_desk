@@ -33,44 +33,21 @@ try {
 // Slideshow start
 
 const slideShowsContainer = _(".slideshow-container");
-const slideShows = [
-  {
-    image: "product-1.jpg",
-    caption:
-      "ErGear Height Adjustable Electric Standing Desk, 48 x 24 Inches Sit Stand up Desk, Memory Computer Home Office Desk (Black)",
-  },
-  {
-    image: "product-2.jpg",
-    caption:
-      "SMUG Standing Desk, Adjustable Height Electric Sit Stand Up Down Computer Table, 40x24 Inch Ergonomic Rising Desks for Work Office Home, Modern Lift Motorized Gaming Desktop Workstation, White",
-  },
-  {
-    image: "product-3.jpg",
-    caption:
-      "Marsail Standing Desk Adjustable Height Home Office Desk, 48x24 Inch Electric Standing Desk, Stand up Desk with Storage Bag,Headphone Hook for Computer Workstations Desk Memory Preset",
-  },
-  {
-    image: "product-4.jpg",
-    caption:
-      "GTRACING 55 Inch Gaming Desk, Computer Gamer Desk with Monitor Stand, Ergonomic Carbon Fiber Surface Gaming Table with Power Outlet and Mouse Pad for Home Office, RGB",
-  },
-  {
-    image: "product-5.jpg",
-    caption:
-      "63 x 24 Inches Standing Desk Adjustable Height with Splice Board- Stand Up Desk, Electric Standing Desk, Sit to Stand Desk for Home & Office Computer Desk",
-  },
-];
 
 function renderSlideshows() {
   let html = "";
+  const specialProducts = products.filter((product) => {
+    return product?.discount;
+  });
 
-  slideShows.forEach((slide, i) => {
+  specialProducts.forEach((slide, i) => {
     html += `
           <div class="slide fade">
-            <div class="number">${i + 1} / ${slideShows.length}</div>
+            <div class="number">${i + 1} / ${specialProducts.length}</div>
+            <div class="price">${getPrice(slide.price, slide?.discount)}</div>
             <img alt="${
               slide.image
-            }" class="slideshow-image" src="assets/images/slideshows/${
+            }" class="slideshow-image" src="assets/images/products/${
       slide.image
     }" />
             <div class="caption">
@@ -167,3 +144,20 @@ function handleSwipeGesture() {
 }
 
 // Slideshow end
+
+// Price
+function getPrice(price, discount) {
+  const newPrice = discount
+    ? (price - price * (discount / 100)).toFixed(2)
+    : price;
+
+  const html = `
+  ${
+    discount
+      ? `<del>$${price}</del> (-${discount}%)  $${newPrice} `
+      : "$" + price
+  }
+  `;
+
+  return html;
+}

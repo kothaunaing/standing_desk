@@ -118,8 +118,8 @@ section {
 }
 
 .product-image {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   min-height: 100%;
   object-fit: cover;
   object-position: top;
@@ -130,8 +130,8 @@ section {
 }
 
 .product-container:hover .product-image {
-  height: 110%;
-  width: 110%;
+  height: 100%;
+  width: 100%;
 }
 
 .product-description,
@@ -167,7 +167,7 @@ section {
 .selection-container select {
   height: 35px;
   width: 80px;
-  border: 2px solid gray;
+  border: 1px solid gray;
   border-radius: 2px;
 }
 
@@ -199,12 +199,25 @@ section {
   opacity: 1;
 }
 
+.add-button::after {
+  animation: comein 0.4s ease-in-out;
+}
+
+@keyframes comein {
+  from {
+    transform: translate3d(0, 2rem, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .add-button.added::after {
   content: "Added";
   position: absolute;
   bottom: 110%;
   left: 50%;
-  transform: translateX(-50%);
+
   background-color: rgb(95, 95, 95);
   padding: 5px;
   border-radius: 5px;

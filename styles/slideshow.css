@@ -65,7 +65,8 @@
   width: 100%;
 }
 
-.number {
+.number,
+.price {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -75,6 +76,13 @@
   border-radius: 5px;
 
   transition: opacity 0.4s ease;
+}
+
+.price {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  left: unset;
 }
 
 .caption {

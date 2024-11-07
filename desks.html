@@ -1,129 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      href="assets/favicon/standing-desk.jpg"
-      type="image/x-icon"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/desks.css" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="assets/favicon/standing-desk.jpg" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/footer.css" />
-    <!-- Font awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/desks.css" />
 
-    <title>SDC | Desks</title>
-  </head>
-  <body>
-    <div class="popup" id="welcome-popup">
-      <div>
-        <h1>Welcome to The Standing Desk Company</h1>
-        <button id="close-welcome-popup"><i class="fa fa-close"></i></button>
-      </div>
+  <link rel="stylesheet" href="styles/footer.css" />
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <title>SDC | Desks</title>
+</head>
+
+<body>
+  <div class="popup" id="welcome-popup">
+    <div>
+      <h1>Welcome to The Standing Desk Company</h1>
+      <button id="close-welcome-popup"><i class="fa fa-close"></i></button>
     </div>
-    <!-- Header -->
-    <header class="main-header">
-      <button class="close-button"></button>
-      <a class="logo-text" href="index.html">
-        <span class="first-word">STANDING</span>
-        <span class="second-word">DESK</span>
-      </a>
-      <nav class="nav-bar">
-        <ul>
-          <li class="nav-link">
-            <a href="index.html">Home</a>
-          </li>
+  </div>
+  <!-- Header -->
+  <header class="main-header">
+    <button class="close-button"></button>
+    <a class="logo-text" href="index.html">
+      <span class="first-word">STANDING</span>
+      <span class="second-word">DESK</span>
+    </a>
+    <nav class="nav-bar">
+      <ul>
+        <li class="nav-link">
+          <a href="index.html">Home</a>
+        </li>
 
-          <li class="dropdown nav-link">
-            <a class="active" href="#"
-              ><i
-                class="fa fa-chevron-down xs"
-                style="font-size: 13px; margin-right: 3px"
-              ></i
-              >Products</a
-            >
-            <ul>
-              <li><a class="active" href="desks.html">Rising Desks</a></li>
-              <li><a href="basket.html">Basket</a></li>
-            </ul>
-          </li>
-          <li class="nav-link">
-            <a href="health-benefits.html">Health Benefits</a>
-          </li>
-          <li class="nav-link"><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
+        <li class="dropdown nav-link">
+          <a class="active" href="#"><i class="fa fa-chevron-down xs"
+              style="font-size: 13px; margin-right: 3px"></i>Products</a>
+          <ul>
+            <li><a class="active" href="desks.html">Rising Desks</a></li>
+            <li><a href="basket.html">Basket</a></li>
+          </ul>
+        </li>
+        <li class="nav-link">
+          <a href="health-benefits.html">Health Benefits</a>
+        </li>
+        <li class="nav-link"><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main -->
-    <main>
-      <section class="cart-button-section">
-        <button class="cart-button">
-          <a href="basket.html">
-            <div class="basket-counts">0</div>
-            <i class="fa fa-cart-plus"></i
-          ></a>
+  <!-- Main -->
+  <main>
+    <section class="cart-button-section">
+      <button class="cart-button">
+        <a href="basket.html">
+          <div class="basket-counts">0</div>
+          <i class="fa fa-cart-plus"></i>
+        </a>
+      </button>
+    </section>
+
+    <section class="search-container">
+      <div>
+        <input id="search-input" placeholder="Search Standing Desks..." />
+        <button class="search-button" id="search-button">
+          <i class="fa fa-search"></i>
         </button>
-      </section>
+      </div>
+    </section>
+    <section>
+      <h2 class="product-counts"></h2>
+      <div class="products-container"></div>
+    </section>
+  </main>
 
-      <section class="search-container">
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div>
+        <h1>About Us</h1>
+        <p>
+          We provide the best products and services to make your life better.
+        </p>
+      </div>
+      <div>
+        <h1>Contact Us</h1>
         <div>
-          <input id="search-input" placeholder="Search Standing Desks..." />
-          <button class="search-button" id="search-button">
-            <i class="fa fa-search"></i>
-          </button>
+          <p>Email: <a href="mailto:standingdesk@company.com">standingdesk@company.com</a></p>
+          <p>Phone: +01234567</p>
         </div>
-      </section>
-      <section>
-        <h2 class="product-counts"></h2>
-        <div class="products-container"></div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-      <div class="footer-content">
+      </div>
+      <div>
+        <h1>Social Media</h1>
         <div>
-          <h1>About Us</h1>
           <p>
-            We provide the best products and services to make your life better.
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
           </p>
         </div>
-        <div>
-          <h1>Contact Us</h1>
-          <div>
-            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-            <p>Phone: +959665754562</p>
-          </div>
-        </div>
-        <div>
-          <h1>Social Media</h1>
-          <div>
-            <p>
-              <i class="fa fa-facebook"></i>
-              <i class="fa fa-twitter"></i>
-            </p>
-          </div>
-        </div>
       </div>
-      <div>
-        <p>© 2024 Standing Desk. All rights reserved</p>
-      </div>
-    </footer>
-    <!-- Script -->
-    <!-- TypedJS -->
+    </div>
+    <div>
+      <p>© 2024 Standing Desk Company. All rights reserved</p>
+    </div>
+  </footer>
+  <!-- Script -->
+  <!-- TypedJS -->
 
-    <script src="scripts/header.js"></script>
-    <script src="scripts/data/products.js"></script>
+  <script src="scripts/header.js"></script>
+  <script src="scripts/data/products.js"></script>
 
-    <script src="scripts/desks.js"></script>
-  </body>
+  <script src="scripts/desks.js"></script>
+</body>
+
 </html>

@@ -11,7 +11,7 @@ function renderOrderSummary() {
             <td>$${calculation.total.toFixed(2)}</td>
           </tr>
           <tr>
-            <th>Taxes (0.1%)</th>
+            <th>Taxes (0.5%)</th>
             <td>$${calculation.tax.toFixed(2)}</td>
           </tr>
           <tr>
@@ -46,10 +46,10 @@ function calculateAll() {
     const product = getProduct(basket.id);
 
     items += basket.items;
-    total = total + basket.items * product.price;
+    total = total + basket.items * getPrice(product.price, product?.discount);
   });
 
-  const tax = total * 0.001;
+  const tax = total * 0.005;
   const discount = total * 0.05;
 
   return {
@@ -81,9 +81,13 @@ function renderBaskets() {
             <div class="product-description">
              ${product.description}
             </div>
-            <div class="product-price">$${(
-              product.price * basket.items
-            ).toFixed(2)}</div>
+            <div class="product-price"> ${getOriginalPrice(
+              basket.items,
+              product.price,
+              product?.discount
+            )} $${(
+      getPrice(product.price, product?.discount) * basket.items
+    ).toFixed(2)}</div>
             <div>${basket.items}  ${basket.items > 1 ? "items" : "item"} 
             <button data-product-id="${basket.id}" data-items="${
       basket.items
@@ -167,4 +171,25 @@ function deleteBasket(id) {
   baskets = baskets.filter((basket) => {
     return basket.id !== id;
   });
+}
+
+function getPrice(price, discount) {
+  const newPrice = discount
+    ? (price - price * (discount / 100)).toFixed(2)
+    : price;
+
+  return newPrice;
+}
+
+function getOriginalPrice(items, price, discount) {
+  const oldPrice = (items * price).toFixed(2);
+
+  if (discount) {
+    return `
+    <del>$${oldPrice}</del>
+    <span>(-${discount}%)</span>
+    `;
+  } else {
+    return "";
+  }
 }

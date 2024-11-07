@@ -1,181 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      href="assets/favicon/standing-desk.jpg"
-      type="image/x-icon"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/contact.css" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="assets/favicon/standing-desk.jpg" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/footer.css" />
-    <!-- Font awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
 
-    <title>SDC | Contact Us</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="main-header">
-      <button class="close-button"></button>
-      <a class="logo-text" href="index.html">
-        <span class="first-word">STANDING</span>
-        <span class="second-word">DESK</span>
-      </a>
-      <nav class="nav-bar">
-        <ul>
-          <li class="nav-link">
-            <a href="index.html">Home</a>
-          </li>
+  <link rel="stylesheet" href="styles/footer.css" />
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-          <li class="dropdown nav-link">
-            <a href="#"
-              ><i
-                class="fa fa-chevron-down xs"
-                style="font-size: 13px; margin-right: 3px"
-              ></i
-              >Products</a
-            >
-            <ul>
-              <li><a href="desks.html">Rising Desks</a></li>
-              <li><a href="basket.html">Basket</a></li>
-            </ul>
-          </li>
-          <li class="nav-link">
-            <a href="health-benefits.html">Health Benefits</a>
-          </li>
-          <li class="nav-link">
-            <a class="active" href="contact.html">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <title>SDC | Contact Us</title>
+</head>
 
-    <!-- Popup -->
-    <div class="popup">
-      <div>
-        <p>Form has been submitted!</p>
-        <button id="ok-button">OK</button>
-      </div>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <button class="close-button"></button>
+    <a class="logo-text" href="index.html">
+      <span class="first-word">STANDING</span>
+      <span class="second-word">DESK</span>
+    </a>
+    <nav class="nav-bar">
+      <ul>
+        <li class="nav-link">
+          <a href="index.html">Home</a>
+        </li>
+
+        <li class="dropdown nav-link">
+          <a href="#"><i class="fa fa-chevron-down xs" style="font-size: 13px; margin-right: 3px"></i>Products</a>
+          <ul>
+            <li><a href="desks.html">Rising Desks</a></li>
+            <li><a href="basket.html">Basket</a></li>
+          </ul>
+        </li>
+        <li class="nav-link">
+          <a href="health-benefits.html">Health Benefits</a>
+        </li>
+        <li class="nav-link">
+          <a class="active" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Popup -->
+  <div class="popup">
+    <div>
+      <p>Form has been submitted!</p>
+      <button id="ok-button">OK</button>
     </div>
+  </div>
 
-    <!-- Main -->
-    <main>
-      <form class="contact-form" method="get" action="contact.html">
-        <div class="title">
-          <h1>Contact us</h1>
-        </div>
+  <!-- Main -->
+  <main>
+    <form class="contact-form" method="get" action="contact.html">
+      <div class="title">
+        <h1>Contact us</h1>
+      </div>
 
-        <div>
-          <label for="name">Name</label>
-          <input
-            class="text-input"
-            id="name"
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
-        </div>
+      <div>
+        <label for="first-name">First Name</label>
+        <input class="text-input" id="first-name" type="text" name="first-name" placeholder="Your First Name"
+          required />
+      </div>
+      <div>
+        <label for="last-name">Last Name</label>
+        <input class="text-input" id="last-name" type="text" name="last-name" placeholder="Your Last Name" required />
+      </div>
 
-        <div>
-          <label for="email">Email</label>
-          <input
-            class="text-input"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your Email Address"
-            required
-          />
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input
-            class="text-input"
-            type="tel"
-            name="phone"
-            id="phone"
-            placeholder="Your Phone Number"
-          />
-        </div>
+      <div>
+        <label for="email">Email</label>
+        <input class="text-input" type="email" name="email" id="email" placeholder="Your Email Address" required />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input class="text-input" type="tel" name="phone" id="phone" placeholder="Your Phone Number" />
+      </div>
 
-        <div>
-          <label for="subject">Subject</label>
-          <input
-            class="text-input"
-            type="text"
-            name="subject"
-            id="subject"
-            placeholder="Subject of Your Message "
-            required
-          />
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea
-            placeholder="Your Message"
-            name="message"
-            id="message"
-            required
-          ></textarea>
-        </div>
+      <div>
+        <label for="subject">Subject</label>
+        <input class="text-input" type="text" name="subject" id="subject" placeholder="Subject of Your Message "
+          required />
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea placeholder="Your Message" name="message" id="message" required></textarea>
+      </div>
 
-        <div>
-          <div class="receive-letter">
-            <label for="receive-letter-checkbox">Receive Newsletter</label>
-            <input id="receive-letter-checkbox" type="checkbox" />
-          </div>
+      <div>
+        <div class="receive-letter">
+          <label for="receive-letter-checkbox">Receive Newsletter</label>
+          <input id="receive-letter-checkbox" type="checkbox" />
         </div>
+      </div>
 
-        <div class="submit-container">
+      <div class="submit-container">
+        <a class="submit-link">
           <button id="submit-button" type="submit">Submit</button>
-        </div>
-      </form>
-    </main>
+        </a>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-      <div class="footer-content">
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div>
+        <h1>About Us</h1>
+        <p>
+          We provide the best products and services to make your life better.
+        </p>
+      </div>
+      <div>
+        <h1>Contact Us</h1>
         <div>
-          <h1>About Us</h1>
+          <p>Email: <a href="mailto:standingdesk@company.com">standingdesk@company.com</a></p>
+          <p>Phone: +01234567</p>
+        </div>
+      </div>
+      <div>
+        <h1>Social Media</h1>
+        <div>
           <p>
-            We provide the best products and services to make your life better.
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
           </p>
         </div>
-        <div>
-          <h1>Contact Us</h1>
-          <div>
-            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-            <p>Phone: +959665754562</p>
-          </div>
-        </div>
-        <div>
-          <h1>Social Media</h1>
-          <div>
-            <p>
-              <i class="fa fa-facebook"></i>
-              <i class="fa fa-twitter"></i>
-            </p>
-          </div>
-        </div>
       </div>
-      <div>
-        <p>© 2024 Standing Desk. All rights reserved</p>
-      </div>
-    </footer>
-    <!-- Script -->
-    <!-- TypedJS -->
+    </div>
+    <div>
+      <p>© 2024 Standing Desk Company. All rights reserved</p>
+    </div>
+  </footer>
+  <!-- Script -->
+  <!-- TypedJS -->
 
-    <script src="scripts/header.js"></script>
-    <script src="scripts/contact.js"></script>
-  </body>
+  <script src="scripts/header.js"></script>
+  <script src="scripts/contact.js"></script>
+</body>
+
 </html>

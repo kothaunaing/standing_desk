@@ -1,5 +1,6 @@
 const submitButton = _("#submit-button");
-const nameInput = _("#name");
+const firstNameEl = _("#first-name");
+const lastNameEl = _("#last-name");
 const emailInput = _("#email");
 const phoneInput = _("#phone");
 const subjectInput = _("#subject");
@@ -19,7 +20,8 @@ okButton.addEventListener("click", () => {
 });
 
 submitButton.addEventListener("click", (e) => {
-  const username = nameInput.value;
+  const firstName = firstNameEl.value;
+  const lastName = lastNameEl.value;
   const email = emailInput.value;
   const phone = phoneInput.value;
   const subject = subjectInput.value;
@@ -28,14 +30,23 @@ submitButton.addEventListener("click", (e) => {
 
   const isemail = email.includes("@");
 
-  if (!(username.trim() && isemail && subject.trim() && message.trim())) {
+  if (
+    !(
+      firstName.trim() &&
+      lastName.trim() &&
+      isemail &&
+      subject.trim() &&
+      message.trim()
+    )
+  ) {
     return;
   }
 
   e.preventDefault();
 
   const userData = {
-    username,
+    firstName,
+    lastName,
     email,
     phone,
     subject,
@@ -43,8 +54,28 @@ submitButton.addEventListener("click", (e) => {
     received,
   };
 
-  popup.classList.add("opened-popup");
-  body.classList.add("overflow-hidden");
-
-  console.log(userData);
+  sendEmail(userData);
 });
+
+function sendEmail(userData) {
+  const subject = userData.subject;
+  const body = `
+  First Name: ${userData.firstName}
+  Last Name: ${userData.lastName}
+  Email: ${userData.email}
+  ${userData.phone.trim() ? `Phone: ${userData.phone}` : ""}
+  Received Newsletter: ${userData.received}
+  Message: ${userData.message}
+  `;
+  const mailtoLink = `mailto:standingdesk@company.com?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+
+  const link = document.createElement("a");
+  link.href = mailtoLink;
+  link.click();
+
+  setTimeout(() => {
+    popup.classList.add("opened-popup");
+  }, 2000);
+}
